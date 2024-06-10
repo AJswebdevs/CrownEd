@@ -1,0 +1,162 @@
+.package-style1 {
+  margin-top: 50px;
+  margin-bottom: 30px;
+
+  &:nth-child(even) {
+    margin-top: 0;
+  }
+  
+  .package-top {
+    position: relative;
+    margin: 0 30px -80px 30px;
+    padding: 25px 40px 22px 40px;
+    z-index: 1;
+    border: 2px solid $secondary-color;
+    border-radius: 30px;
+    background-color: $white-color;
+    transition: all ease 0.4s;
+  }
+
+  &.active,
+  &:hover {
+    .package-top {
+      background-color: $secondary-color;
+      border-color: transparent;
+    }
+  }
+
+  .package-icon {
+    width: 66px;
+    height: 66px;
+    line-height: 66px;
+    text-align: center;
+    background-color: $theme-color2;
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+
+  .package-name {
+    margin: 0 0 7px 0;
+    transition: all ease 0.4s;
+  }
+
+  .package-price {
+    font-size: 50px;
+    font-weight: 600;
+    font-family: $title-font;
+    color: $theme-color;
+    margin: 0;
+    line-height: 1;
+    transition: all ease 0.4s;
+
+    .duration {
+      font-weight: 600;
+      font-size: 22px;
+      color: $body-color;
+      transition: all ease 0.4s;
+    }
+  }
+
+  &.active,
+  &:hover {
+    .package-name,
+    .package-price .duration {
+      color: $white-color;
+    }
+  }
+
+  .package-body {
+    background-color: $smoke-color;
+    padding: 115px 72px 40px 72px;
+    border-radius: 30px;
+  }
+
+  .list-style1 {
+    ul {
+      margin-bottom: 25px;
+    }
+    
+    li {
+      font-size: 18px;
+    }
+  }
+
+
+  &.active,
+  &:hover {
+    .vs-btn {
+      background-color: $theme-color;
+      color: $white-color;
+    }
+  }
+
+}
+
+
+@include ml {
+  .package-style1 {
+    margin-top: 0;
+    
+    .package-top {
+      margin: 0 10px -50px 10px;
+      padding: 25px 30px 22px 30px;
+    }
+
+    .package-body {
+      padding: 75px 43px 40px 43px;
+    }
+
+    .list-style1 li {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    .package-name {
+      font-size: 24px;
+    }
+
+    .package-price {
+      font-size: 40px;
+
+      .duration {
+        font-size: 16px;
+      }
+    }
+
+  }
+}
+
+
+@include lg {
+  .package-style1 {
+    .package-icon {
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+
+      img{
+        max-width: 60%;
+      }
+    }
+
+    .package-body {
+      padding: 70px 25px 35px 25px;
+    }
+
+    .vs-btn {
+      padding: 14px 24px 16px 24px;
+    }
+  }
+  
+}
+
+
+@include sm {
+  .package-style1 {
+    .package-top {
+      padding: 25px 20px 22px 20px;
+    }
+  }
+}

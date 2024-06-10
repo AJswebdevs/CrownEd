@@ -1,0 +1,114 @@
+.vs-error-wrapper {
+  background-color: $smoke-color;
+}
+
+
+.error-number {
+  font-size: 150px;
+  font-weight: 600;
+  display: block;
+  line-height: 1;
+  margin: -0.17em 0 17px 0;
+  color: $theme-color;
+}
+
+.error-title {
+  text-transform: capitalize;
+  font-size: 60px;
+  margin: -0.3em 0 20px 0;
+}
+
+.error-text {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 38px;
+  max-width: 500px;
+  text-transform: capitalize;
+  color: $title-color;
+}
+
+.search-inline {
+  position: relative;
+  width: 100%;
+  margin-bottom: 45px;
+
+  input {
+    background-color: $white-color;
+    border: 2px solid #D9D9D9;
+    height: 60px;
+    padding: 0 0 0 40px;
+    font-size: 16px;
+    border-radius: 9999px;
+
+    &:focus {
+      border-color: $theme-color;
+    }
+  }
+
+  button {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    border: none;
+    color: $white-color;
+    background-color: $secondary-color;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 50%;
+
+    &:hover {
+      background-color: $theme-color;
+      color: $white-color;
+    }
+  }
+}
+
+@include lg {
+  .error-number {
+    font-size: 120px;
+  }
+
+  .error-title {
+    font-size: 48px;
+  }
+
+  .error-text {
+    font-size: 18px;
+    margin-bottom: 25px;
+    max-width: 100%;
+  }
+
+  .search-inline {
+    margin-bottom: 30px;
+  }
+}
+
+@include md {
+  .error-content {
+    margin-top: 50px;
+  }
+}
+
+@include sm {
+  .error-number {
+    font-size: 100px;
+  }
+
+  .error-title {
+    font-size: 28px;
+  }
+
+  .error-text {
+    font-size: 16px;
+  }
+
+  .search-inline {
+    input {
+      padding: 0 0 0 25px;
+    }
+  }
+}
