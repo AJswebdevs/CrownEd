@@ -1,0 +1,473 @@
+.service-style1 {
+  --theme-color: #76AD1E;
+  margin-bottom: 30px;
+  
+  .service-body {
+    text-align: center;
+    padding-bottom: 115px;
+    position: relative;
+  }
+  
+  .service-img {
+    border-radius: 30px 30px 0 0;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      transform: scale(1.001);
+      transition: all ease 0.4s;
+    }
+  }
+
+  .service-content {
+    padding: 0.1px 20px 20px 20px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    margin-top: -145px;
+    background-color: $theme-color;
+    border-radius: 150px 150px 30px 30px;
+  }
+
+  .service-icon {
+    width: var(--icon-size, 100px);
+    height: var(--icon-size, 100px);
+    line-height: var(--icon-size, 100px);
+    background-color: $white-color;
+    text-align: center;
+    border-radius: var(--icon-radius, 10px 50px 10px 10px);
+    display: inline-block;
+    margin-top: -35px;
+    margin-bottom: 28px;
+    transition: all ease 0.4s;
+  }
+
+  .service-title {
+    color: $white-color;
+    font-size: 26px;
+    margin-bottom: 12px;
+
+    a {
+      color: inherit;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .service-text {
+    color: $white-color;
+    margin: 0 0 17px 0;
+  }
+
+  .service-bottom {
+    overflow: hidden;
+  }
+  
+  .service-btn {
+    display: block;
+    border: 3px solid $white-color;
+    color: $white-color;    
+    border-radius: 9999px;
+    height: 50px;
+    line-height: 43px;
+    font-family: $title-font;
+    font-weight: 600;
+    transition: all ease 0.4s;
+    margin-bottom: -50px;
+    opacity: 0;
+    visibility: hidden;
+
+    &:hover {
+      background-color: $white-color;
+      color: $theme-color;
+    }
+  }
+
+  &:hover {
+    .service-btn {
+      margin-bottom: 0;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .service-icon {
+      background-color: $theme-color2;
+    }
+
+    .service-img {
+      img {
+        transform: scale(1.15);
+        transition: all ease 0.4s;
+      }
+    }
+  }  
+
+  &:nth-child(2n+2) {
+    --theme-color: #18C0CB;
+    --icon-radius: 10px 10px 10px 50px;
+  }
+
+  &:nth-child(3n+3) {
+    --theme-color: #490D59;
+    --icon-radius: 50px 10px 10px 10px;
+  }
+
+  &:nth-child(4n+4) {
+    --theme-color: #E93500;
+    --icon-radius: 10px 10px 50px 10px;
+  }
+}
+
+.service-style2 {
+  display: flex;
+  margin-bottom: 30px;
+
+  .service-icon {
+    position: relative;
+    display: inline-block;
+    width: 76px;
+    height: 78px;
+    line-height: 76px;
+    text-align: center;
+    margin-right: 20px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  .service-shape1,
+  .service-shape2,
+  .service-shape3 {
+    background-color: $theme-color2;
+    position: absolute;
+    left: var(--border-size, 0);
+    top: var(--border-size, 0);
+    right: var(--border-size, 0);
+    bottom: var(--border-size, 0);
+    clip-path: url(#service-clip1);
+    z-index: -1;
+    transition: all ease 0.4s;
+  }
+
+  .service-shape2 {
+    --border-size: 2px;
+    background-color: $white-color;
+  }
+  
+  .service-shape3 {
+    --border-size: 5px;
+    background-color: $secondary-color;
+  }
+
+  &:hover {
+    .service-shape3 {
+      background-color: $theme-color;
+    }
+
+    .service-shape1 {
+      background-color: $secondary-color;
+    }
+  }
+
+  .service-content {
+    flex: 1;
+  }
+
+  .service-title {
+    font-size: 26px;
+    margin: -0.2em 0 8px 0;
+  }
+
+  .service-text {
+    margin: 0;
+  }
+}
+
+.service-description {
+  margin-top: 30px;
+  margin-bottom: 42px;
+}
+
+// service-style3
+.service-details{
+  position: relative;
+  .row{
+    @include md{
+      margin-bottom: -50px;
+    }
+  }
+}
+.service-card3{
+  position: relative;
+  text-align: center;
+  padding: 61px 0 57px;
+  &:hover{
+    .ser-icon3{
+      img{
+        transform: rotate(360deg);
+      }
+    }
+  }
+  @include lg{
+    background-color: #ffe5e6;
+    border-radius: 20px;
+    padding: 40px 0 41px;
+  }
+  @include md{
+    margin-bottom: 50px;
+  }
+  @include sm{
+    width: 100%;
+  }
+  &::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 419px;
+    height: 426px;
+    z-index: -11;
+    background-image: url(../img/service/ser-col-bg.png);
+    @include lg{
+      display: none;
+    }
+  }
+  .title{
+    font-size: 34px;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 5px;
+    a{
+      color: #083666;
+      &:hover{
+        color: var(--theme-color);
+      }
+    }
+  }
+  span{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    display: block;
+    margin-bottom: 22px;
+  }
+}
+.service-card3.v2{
+  @include lg{
+    background-color: #ceffd0;
+  }
+  &::before{
+    background-image: url(../img/service/ser-col-bg2.png);
+  }
+}
+.service-card3.v3{
+  @include lg{
+    background-color: #ffeca8;
+  }
+  &::before{
+    background-image: url(../img/service/ser-col-bg3.png);
+  }
+}
+.ser-icon3{
+  width: 124px;
+  height: 124px;  
+  line-height: 124px;
+  text-align: center;
+  border-radius: 50%;
+  border-radius: 60px;
+  background: #FFF;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  margin: 0 auto 17px;
+  display: inline-block;
+  img{
+    transition: all 300ms ease;
+  }
+}
+.ser-btn3{
+  font-size: 18px;
+  color: var(--title-color);
+  &:hover{
+    i{
+      color: var(--theme-color);
+      transition: all 0.3s ease;
+    }
+  }
+  i{
+    transform: rotate(-45deg);
+  }
+}
+
+
+// service-tyle4
+.service-tyle4{
+  position: relative;
+  .row{
+    @include lg{
+      margin-bottom: -50px;
+     }
+  }
+}
+.title-area-four.ser4{
+  margin-bottom: 69px;
+  @include md{
+    margin-bottom: 50px;
+  }
+  img{
+    margin-bottom: 1px;
+  }
+  h2{
+    @include lg{
+      font-size: 50px;
+      line-height: 60px;
+    }
+    @include md{
+      font-size: 38px;
+      line-height: 52px;
+      br{
+        display: none;
+      }
+    }
+    @include sm{
+      font-size: 34px;
+      line-height: 43px;
+    }
+    @include xs{
+      font-size: 28px;
+      line-height: 38px;
+    }
+  }
+  .sub-title{
+    @include vxs{
+      line-height: 26px;
+    }
+  }
+}
+.ser-card4{
+  position: relative;
+  border-radius: 80px 500px 500px 500px;
+  border: 2px solid #E6E6E6;
+  background: #FFF;
+  padding: 36px 28px 31px 129px;
+  transition: all 0.3s ease;
+  @include lg{
+    margin-bottom: 50px;
+  }
+  @include vxs{
+    border-radius: 20px;
+    padding: 20px 20px;
+  }
+  &:hover{
+    background-color: var(--vs-secondary-color);
+    .ser-content4{
+      .title{
+        color: var(--white-color);
+      }
+      p{
+        color: #B9B9B9;
+      }
+    }
+  }
+}
+.ser-icon4{
+  position: absolute;
+  top: 38px;
+  left: 28px;
+  width: 77.355px;
+  height: 77.355px;
+  line-height: 74.355px;
+  text-align: center;
+  background-color: var(--theme-color);
+  border-radius: 50%;
+  margin: 5px;
+  @include vxs{
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-bottom: 20px;
+  }
+  &::before{
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 87px;
+    height: 88px;
+    border: 2px solid var(--theme-color);
+    border-radius: 50%;
+  }
+}
+.ser-content4{
+  .title{
+    font-size: 24px;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 8px;
+  }
+  p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    margin-bottom: 0;
+  }
+}
+.ser-card4.v2{
+  margin-bottom: 40px;
+}
+
+
+
+
+
+
+
+
+@include lg {
+  .service-style1 {
+    .service-body {
+      padding-bottom: 90px;
+    }
+  }
+
+  .service-style2 { 
+    display: block;
+    text-align: center;
+
+    .service-icon {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  .gy-30 {
+    .service-style2 {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@include sm {
+  .service-style1 {
+    .service-content {
+      position: relative;
+    }
+    
+    .service-body {
+      padding-bottom: 0;
+    }
+
+    .service-btn {
+      margin-bottom: 0;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .service-style2 {
+    .service-title {
+      font-size: 22px;
+    }
+  }
+}
