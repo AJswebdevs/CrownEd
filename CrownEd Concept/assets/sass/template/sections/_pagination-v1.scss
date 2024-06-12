@@ -1,0 +1,114 @@
+.vs-pagination {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+
+  ul {
+    margin: 0;
+    padding: 7.5px 10px;
+    list-style: none;
+    border-radius: 9999px;
+    background-color: $smoke-color;
+  }
+
+  span,
+  a {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    border: none;
+    color: $title-color;
+    font-family: $title-font;
+    font-size: 18px;
+    font-weight: 600;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    z-index: 1;
+    text-transform: capitalize;
+    background-color: $white-color;
+    border-radius: 50%;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 3px;
+      right: 3px;
+      bottom: 3px;
+      top: 3px;
+      background-color: $secondary-color;
+      border-radius: inherit;
+      transition: all ease 0.4s;
+      transform: scale(0.6);
+      opacity: 0;
+      visibility: hidden;
+      z-index: -1;
+    }
+
+    i {
+      margin-left: 7px;
+    }
+
+    &.active,
+    &:hover {
+      color: $white-color;
+      border-color: transparent;
+
+      &:before {
+        transform: scale(1);
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  li {
+    display: inline-block;
+    margin: 0 2px;
+    list-style-type: none;
+  }
+
+  .pagi-btn {
+    width: auto;
+    height: auto;
+    line-height: 1;
+    padding: 21px 31px;
+    border-radius: 9999px;
+    background-color: $secondary-color;
+    color: $white-color;
+
+    &:before {
+      background-color: $theme-color;
+    }
+  }
+}
+
+
+@include sm {
+  .vs-pagination {
+    gap: 5px;
+
+    ul {
+      padding: 3px 3px;
+    }
+
+    span,
+    a {
+      font-size: 14px;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+    }
+
+    li {
+      margin: 0 0;
+    }
+
+    .pagi-btn {
+      padding: 11px 15px;
+      font-size: 12px;
+    }
+  }
+}

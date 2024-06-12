@@ -1,0 +1,236 @@
+
+// ls-wp-container
+.ls-container.ls-v6 .ls-bottom-slidebuttons {
+  background-color: #fff;
+  padding: 6px 9px;
+  line-height: 1;
+  border-radius: 9999px;
+}
+
+.ls-container.ls-v6 .ls-bottom-slidebuttons a {
+  border: none !important;
+  background-color: #B5B5B5;
+  width: 13px !important;
+  height: 13px !important;
+}
+
+
+.ls-container.ls-v6 .ls-bottom-slidebuttons a:hover,
+.ls-container.ls-v6 .ls-bottom-slidebuttons a.ls-nav-active {
+  border: none !important;
+  background-color: var(--theme-color) !important;
+}
+
+.ls-container.ls-v6 .ls-bottom-nav-wrapper {
+  text-align: right;
+  max-width: var(--main-container);
+  top: -73px !important;
+}
+
+// vs-hero-wrapper4
+.vs-hero-wrapper4{
+  position: relative;
+  margin-top: -30px;
+  @include md{
+    margin-top: -30px;
+  }
+}
+.banner-slider4{
+  position: relative;
+}
+.banner-slide4{
+  position: relative;
+  height: 85vh;
+  background-image: url(../img/bg/hero-bg-4-1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  > img {
+    width: 100%;
+    height: 100%;
+    object-fit:fill;
+  }
+}
+.banner-slide4-content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 100%;
+  z-index: 99;
+}
+.banner-content4{
+  max-width: 610px;
+  .banner-title{
+    color: var(--white-color);
+    font-size: 60px;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 17px;
+    @include sm{
+      font-size: 50px;
+    }
+    @include xs{
+      font-size: 40px;
+    }
+    span{
+      position: relative;
+      display: inline-block;
+      &::before{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 10px;
+        border-radius: 10px;
+        background-color: var(--theme-color2);
+      }
+    }
+  }
+  p{
+    color: var(--white-color);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: normal;
+    padding-right: 30px;
+    margin-bottom: 45px;
+    @include vxs{
+      font-size: 19px;
+      padding-right: 1px;
+    }
+  }
+}
+
+
+// vs-hero-wrapper4
+.vs-hero-wrapper5{
+  position: relative;
+  padding: 68px 0 37px;
+  background-image: url(../img/bg/banner5.jpg);
+  background-position: center;
+  background-size: cover;
+  @include lg {
+    padding: 30px 0;
+  }
+}
+.banner-slide5{
+  padding: 91px 0 181px;
+  @include lg{
+    padding: 68px 51px 120px;
+  }
+  @include vxs {
+    padding: 50px 25px 90px; 
+  }
+  .banner-title{
+    font-size: 80px;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 10px;
+    @include sm{
+      font-size: 59px;
+    }
+    @include xs{
+      font-size: 50px;
+    }
+    @include vxs{
+      font-size: 32px;
+    }
+  }
+  p{
+    color: #1B1B1B;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: normal;
+    padding-right: 30px;
+    margin-bottom: 31px;
+    @include vxs{
+      padding-right: 0;
+      font-size: 20px;
+    }
+  }
+}
+.vs-btn.banner{
+  font-size: 18px;
+  font-weight: 600;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 54px;
+}
+.banner-slider5{
+  position: relative;
+  .slick-dots {
+    position: absolute;
+    bottom: 90px;
+    left: 0;
+    @include lg {
+      bottom: 30px;
+      left: 50px;
+    }
+    @include vxs {
+      left: 25px;
+      bottom: 10px;
+    }
+  }
+  @include lg{
+    background-color: #ffd600;
+    border-radius: 20px;
+    width: 100%;
+  }
+  &::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 958px;
+    height: 615.351px;
+    margin-left: -67px;
+    background-image: url(../img/bg/hero5-1.png);
+    @include lg{
+      display: none;
+    }
+  }
+}
+
+
+
+body.layout5 {
+  .slick-dots {
+    li {
+      button {
+        background-color: #000;
+      }
+      &.slick-active {
+        button {
+          background-color: #E8063C;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+@media (max-width: 1199px) {
+  .ls-container.ls-v6 .ls-bottom-slidebuttons {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .ls-html-layer.ls-layer .vs-btn {
+    padding: 10px 23px 12px 23px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  .ls-html-layer.ls-layer .vs-btn {
+    padding: 9px 22px 12px 22px;
+    font-size: 13px;
+  }
+}
