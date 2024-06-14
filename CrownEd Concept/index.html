@@ -929,13 +929,24 @@
                 <p class="sec-text text-title font-title">Keep up to date with the latest news and offers</p>
                 <h2 class="sec-title2">Sign up for our newsletter</h2>
             </div>
-            <form action="#" class="form-style1">
+            <form action="#" class="form-style1" name='submit-to-google-sheet'>
                 <div class="form-group">
-                    <input type="email" placeholder="Enter Your Email Address...">
+                    <input type="email" name="Email" placeholder="Enter Your Email Address...">
                     <button class="vs-btn" type="submit">Subscribe</button>
                 </div>
             </form>
         </div>
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbyBDty2oBJjUk9HFUvR-AVk7l07B_QMXIvCNs0Eh0vC-T4O5ZkXn_Np7oJzdyTgrUQM/exec'
+            const form = document.forms['submit-to-google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
     </section><!--==============================
 			Footer Area
 	==============================-->
