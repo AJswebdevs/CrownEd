@@ -4691,12 +4691,15 @@ a.text-theme:hover,
   background-color: var(--smoke-color);
   overflow: hidden;
   background-position: center left;
+  
   /* Medium devices */
 }
 @media (max-width: 991px) {
   .breadcumb-wrapper {
     padding-top: 100px;
     padding-bottom: 30px;
+    background-position:center;/
+    
   }
 }
 
@@ -4707,6 +4710,7 @@ a.text-theme:hover,
   }
   .breadcumb-wrapper {
     padding-top: 90px;
+    background-position:center;
   }
   .breadcumb-menu-wrap {
     margin: 65px 0 0 0;
@@ -4736,6 +4740,8 @@ a.text-theme:hover,
   }
   .breadcumb-wrapper {
     padding-top: 60px;
+    background-position:center;
+    
   }
   .breadcumb-menu-wrap {
     margin: 45px 0 0 0;
