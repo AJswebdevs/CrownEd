@@ -4719,6 +4719,12 @@ a.text-theme:hover,
     font-size: 16px;
   }
 }
+@media (max-width: 1585.33px) {
+  .breadcumb-wrapper {
+      padding-top: 90px;
+      background-position: center;
+  }
+}
 /* Medium devices */
 @media (max-width: 991px) {
   .breadcumb-title {
