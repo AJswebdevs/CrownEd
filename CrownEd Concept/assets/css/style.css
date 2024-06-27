@@ -3990,12 +3990,13 @@ a.text-theme:hover,
 .vs-menu-toggle {
   /* Large devices */
 }
-@media (max-width: 1199px) {
+  /*For navigation Bar*/
+@media (min-width: 1197.78px) {
   .vs-menu-toggle {
-    display: inline-block !important;
+    display: none !important;
   }
 }
-
+  
 /* Medium Large devices */
 @media (max-width: 1399px) {
   .header-layout2 {
@@ -4719,6 +4720,13 @@ a.text-theme:hover,
     font-size: 16px;
   }
 }
+@media (max-width: 1585.33px) {
+  .breadcumb-wrapper {
+      padding-top: 90px;
+      background-position: center;
+  }
+}
+
 /* Medium devices */
 @media (max-width: 991px) {
   .breadcumb-title {
