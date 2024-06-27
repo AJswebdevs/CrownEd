@@ -1,0 +1,245 @@
+.map-style1 {
+  border-radius: 30px;
+  overflow: hidden;
+  line-height: 0;
+
+  @include sm {
+    border-radius: 20px;
+  }
+}
+
+.vs-social {
+  a {
+    display: inline-block;
+    position: relative;
+    width: var(--icon-size, 50px);
+    height: var(--icon-size, 50px);
+    line-height: var(--icon-size, 50px);
+    margin-right: 5px;
+    font-size: 18px;
+    text-align: center;
+    background-color: $theme-color2;
+    color: $title-color;
+    border-radius: 50%;
+    z-index: 1;
+    transition: all ease 0.4s;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 3px;
+      top: 3px;
+      bottom: 3px;
+      right: 3px;
+      background-color: $secondary-color;
+      border-radius: inherit;
+      transition: all ease 0.3s;
+      transform: scale(0.4);
+      opacity: 0;
+      visibility: hidden;
+      z-index: -1;
+    }
+
+    &:hover {
+      color: $white-color;
+      background-color: $theme-color;
+
+      &:before {
+        transform: scale(1);
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+.brand-style1 {
+  background-color: $white-color;
+  border: 3px solid #F1F1F1;
+  height: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all ease 0.4s;
+  border-radius: 30px;
+
+  &:hover {
+    border-color: $theme-color2;
+  }
+}
+
+.social-style1 {
+  .social-title {
+    color: $white-color;
+    display: block;
+    margin-bottom: 20px;
+    margin-top: -0.22em;
+  }
+
+  a {
+    &:hover {
+      background-color: $white-color;
+    }
+  }
+}
+
+.table-style1 {
+  background-color: $secondary-color;
+  padding: 1px 155px 85px 145px;
+  border-radius: 274px 30px 274px 274px;
+  text-align: center;
+  margin-top: calc(var(--icon-size, 102px) / 2);
+
+  .table-icon {
+    display: block;
+    width: var(--icon-size, 102px);
+    height: var(--icon-size, 102px);
+    line-height: var(--icon-size, 102px);
+    font-size: var(--icon-font-size, 50px);
+    background-color: $theme-color;
+    color: $white-color;
+    text-align: center;
+    border-radius: 50%;
+    margin: calc(var(--icon-size, 102px) / -2) auto 40px auto;
+  }
+
+  .sec-title {
+    color: $white-color;
+    margin-bottom: 5px;
+  }
+
+  .sec-text {
+    color: $white-color;
+    margin-bottom: 20px;
+  }
+
+  .tr {
+    display: flex;
+    justify-content: space-between;
+    background-color: $white-color;
+    margin-bottom: 5px;
+    border-radius: 9999px;
+    padding: 11px 0;
+    transition: all ease 0.4s;
+
+    &:hover {
+      background-color: $theme-color2;
+    }
+  }
+
+  .th,
+  .td {
+    flex: 1;
+    font-size: 18px;
+    font-family: $title-font;
+    font-weight: 600;
+    color: $title-color;
+    line-height: 1.5;
+  }
+
+  .th {
+    border-right: 1px solid #A7A7A7;
+  }
+
+}
+
+.countdown-style1 {
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  li {
+    color: $title-color;
+    background-color: $theme-color2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 16px;
+    font-family: $title-font;
+    font-weight: 600;
+    width: 110px;
+    height: 110px;
+    border-radius: 30px;
+    transition: all ease 0.4s;
+    margin-right: 7px;
+    line-height: 1;
+    padding-bottom: 5px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    span {
+      font-size: 50px;
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    &:hover {
+      background-color: $theme-color;
+      color: $white-color;
+    }
+  }
+}
+
+
+
+@include lg {
+  .countdown-style1 {
+    li {
+      width: auto;
+      height: auto;
+      padding: 20px 15px;
+      font-size: 14px;
+
+      span {
+        font-size: 40px;
+      }
+    }
+  }
+}
+
+@include md {
+  .table-style1 {
+    padding: 1px 40px 60px 40px;
+    border-radius: 30px;
+  }
+
+}
+
+
+@include sm {
+  .table-style1 {
+    padding: 1px 15px 60px 15px;
+    border-radius: 30px;
+
+    .table-icon {
+      margin-bottom: 30px;
+    }
+
+    .th,
+    .td {
+      font-size: 14px;
+    }
+  }
+
+
+  .countdown-style1 {
+    li {
+      font-size: 12px;
+      padding: 10px 10px;
+      border-radius: 10px;
+
+      span {
+        font-size: 22px;
+      }
+    }
+  }
+}

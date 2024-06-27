@@ -1,0 +1,411 @@
+.form-wrap1.space {
+	@media (min-width: $md) {
+		padding-bottom: 480px;
+	}
+
+	@include md {
+		background-image: none !important;
+	}
+}
+
+
+.form-style1 {
+	.form-group {
+		position: relative;
+		margin: 0 auto;
+		max-width: 880px;
+	}
+
+	input {
+		height: 70px;
+		border-color: #D8D8D8;
+		border-radius: 9999px;
+		padding-left: 50px;
+	}
+
+	.vs-btn {
+		position: absolute;
+		top: 50%;
+		right: 8px;
+		transform: translateY(-50%);
+	}
+}
+
+.form-style2 {
+	.form-title {
+		color: $white-color;
+		margin: -0.2em 0 18px 0;
+	}
+
+	.form-group {
+		display: flex;
+		margin: 0;
+	}
+
+	input {
+		border: 2px solid $white-color;
+		color: $white-color;
+		background-color: transparent;
+		height: 60px;
+		border-radius: 9999px;
+		margin-right: 10px;
+		flex: 1;
+
+		@include inputPlaceholder {
+			color: $white-color;
+		}
+	}
+}
+
+.form-style3 {
+	border: 3px solid $secondary-color;
+	padding: 30px 30px 3px 30px;
+	margin-bottom: 30px;
+	background-color: $white-color;
+	border-radius: 30px;
+
+	.form-group {
+		margin-bottom: 27px;
+	}
+
+	input {
+		border: 1px solid rgba(#999999, 0.5);
+		padding-right: 20px;
+		padding-left: 20px;
+		border-radius: 10px;	
+	}
+
+	input {
+		&[type="checkbox"] {
+			~ label {
+				font-weight: 500;
+				margin: 0;
+
+				&:before {
+					background-color: #D9D9D9;
+					border: none;
+				}
+			}
+
+			&:checked {
+				~ label {
+					&:before {
+						background-color: $theme-color;
+					}
+				}
+			}
+		}
+	}
+
+	label {
+		font-weight: 400;
+	}
+
+	.required {
+		font-size: 14px;
+		color: $error-color;
+	}
+
+	&.layout2 {
+		padding: 0;
+		border: none;
+	}
+
+}
+
+// form-section4
+.form-section4{
+	position: relative;
+}
+
+.form-style4{
+	border-radius: 50px;
+	background: #490D59;
+	width: 804px;
+	margin: 0 auto;
+	padding: 73px 102px 27px;
+	@include md{
+		width: 100%;
+		padding: 55px 58px 27px;
+	}
+	@include xs{
+		padding: 40px 32px 27px;
+	}
+	.form-group{
+		label{
+			color: var(--white-color);
+			.required{
+				font-size: 13px;
+				font-weight: 400;
+			}
+		}
+		input{
+			height: 56px;
+			border-radius: 10px;
+		}
+	}
+}
+.form-box4{
+	position: relative;
+	padding-bottom: 103px;
+	@include ml{
+		padding-bottom: 0;
+	}
+	&::before{
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: -110px;
+		width: 1512px;
+		height: 750px;
+		background-image: url(../img/bg/form4-1.png);
+		@include ml{
+			width: 100%;
+			display: none;
+		}
+	}
+}
+.vs-btn.form{
+	width: 273px;
+	text-align: center;
+	@include vxs{
+		width: 100%;
+	}
+}
+.title-area-four.form{
+	margin-bottom: 41px;
+	@include xs{
+		margin-bottom: 28px;
+	}
+	h2{
+		color: var(--white-color);
+		margin-bottom: 9px;
+		@include sm{
+			font-size: 39px;
+			line-height: 51px;
+		}
+		@include vxs{
+			font-size: 24px;
+			line-height: 24px;
+			margin-bottom: 10px;
+		}
+	}
+	.sub-title{
+		color: var(--white-color);
+		@include vxs{
+			font-size: 15px;
+			line-height: 21px;
+		}
+	}
+} 
+
+
+
+// wave-shaps-section
+.wave-shaps-section{
+	position: relative;
+}
+
+
+
+// form-style5
+.form-section5{
+	position: relative;
+	padding: 80px 0 81px;
+	&::before{
+		content: "";
+		position: absolute;
+		top: -20px;
+		right: 0;
+		width: 952.565px;
+		height: 740.969px;
+		background-image: url(../img/icon/form-shape1-1.png);
+		@include lg{
+			display: none;
+		}
+	}
+	.row{
+		.col-lg-6,
+		.col-lg-12{
+			padding: 0 10px;
+		}
+	}
+}
+.title-area.form5{
+	position: relative;
+	margin-bottom: 33px;
+	z-index: 99;
+	.sec-title{
+		margin-bottom: 21px;
+		@include md{
+			font-size: 50px;
+		}
+		@include sm{
+			font-size: 43px;
+		}
+		@include vxs{
+			font-size: 33px;
+			br{
+				display: none;
+			}
+		}
+	}
+	.sub-title{
+		@include xs{
+			font-size: 16px;
+			line-height: 26px;
+			br{
+				display: none;
+			}
+		}
+	}
+}
+.form-content5{
+	margin-top: 60px;
+	@include lg{
+		margin-left: 6px;
+	}
+	@include md{
+		margin: 0 0 50px;
+	}
+}
+.form-style-v5{
+	position: relative;
+	border-radius: 50px;
+	background: var(--white-color);
+	padding: 58px 50px 45px;
+	margin-left: 93px;
+	z-index: 999;
+	@include lg{
+		margin-left: 0;
+		padding: 58px 33px 45px;
+	}
+	@include vxs{
+		padding: 39px 19px 35px;
+	}
+}
+.form-list{
+	list-style: none;
+	padding-left: 0;
+	margin-bottom: 0;
+	li{
+		position: relative;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 44px;
+		padding-left: 38px;
+		@include vxs{
+			line-height: 26px;
+			margin-bottom: 10px;
+			font-size: 16px;
+		}
+		i{
+			position: absolute;
+			top: 10px;
+			left: 4px;
+			color: var(--theme-color);
+			font-size: 19px;
+			@include vxs{
+				top: 0;
+			}
+			&::after{
+				content: "";
+				position: absolute;
+				bottom: -3px;
+				left: -4px;
+				width: 21px;
+				height: 21px;
+				border: 2px solid var(--theme-color);
+			}
+		}
+	}
+}
+.form-style-v5{
+	.form-group{
+		margin-bottom: 0;
+		input{
+			border-radius: 10px;
+			border: 1px solid #999;
+			background: var(--white-color);
+			height: 56px;
+			color: #888;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: normal;
+			font-family: var(--title-font);
+			margin-bottom: 20px;
+			padding: 0 22px;
+			&::placeholder{
+				color: #888;
+			}
+		}
+		textarea{
+			border: 1px solid #999;
+			color: #888;
+			height: 131px;
+			padding: 13px 22px;
+			&::placeholder{
+				color: #888;
+			}
+		}
+	}
+}
+.form-v5{
+	background-color: #E8063C !important;
+	padding: 0 59px;
+	height: 50px;
+	color: #fff !important;
+	font-family: var(--title-font);
+	font-size: 18px;
+	font-weight: 600;
+	line-height: normal;
+	margin-top: 20px;
+	@include vxs{
+		width: 100%;
+	}
+}
+
+
+
+
+
+
+
+@include sm {
+	.form-style1 {
+		.form-group {
+			text-align: center;
+		}
+
+		input {
+			margin-bottom: 20px;
+			height: 50px;
+			padding-left: 30px;
+			font-size: 14px;
+		}
+
+		.vs-btn {
+			position: relative;
+			top: 0;
+			transform: none;
+		}
+	}
+
+	.form-style2 {
+		.form-group {
+			display: block;
+		}
+
+		.vs-btn {
+			margin-top: 10px;
+		}
+
+		input {
+			height: 50px;
+		}
+	}
+
+	.form-style3 {
+		padding: 30px 15px 3px 15px;
+	}
+}
