@@ -1,0 +1,141 @@
+.breadcumb-menu {
+  position: relative;
+  margin: 0;
+  padding: 15px 30px 15px 30px;
+  list-style-type: none;
+  background-color: $secondary-color;
+  border-radius: 10px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 99999px;
+    z-index: -1;
+    border-radius: 0 7px 7px 0;
+  }
+
+  span,
+  li,
+  a {
+    color: $white-color;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+    word-break: break-word;
+    white-space: normal;
+    display: inline-block;
+    font-family: $title-font;
+    letter-spacing: 0.02em;
+  }
+
+  a {
+    &:hover {
+      color: $theme-color;
+    }
+  }
+
+  li {
+    &:not(:last-child):after {
+      content: '-';
+      position: relative;
+      margin-left: 15px;
+      margin-right: 10px;
+    }
+  }
+}
+
+.breadcumb-menu-wrap {
+  margin: 95px 0 0 0;
+  min-height: 60px;
+  position: relative;
+}
+
+.breadcumb-title {
+  font-size: 70px;
+  color: $title-color;
+  margin: -0.21em 0 -0.4em 0;
+}
+
+.breadcumb-text {
+  font-size: 18px;
+  color: $body-color;
+  margin: 32px 0 -0.25em 0;
+}
+
+.breadcumb-wrapper {
+  padding-top: 175px;
+  padding-bottom: 20px;
+  background-color: $smoke-color;
+  overflow: hidden;
+  background-position: center left;
+
+  @include md {
+    padding-top: 100px;
+    padding-bottom: 30px;
+  }
+}
+
+@include lg {
+  .breadcumb-title {
+    font-size: 48px;
+  }
+
+  .breadcumb-wrapper {
+    padding-top: 90px;
+  }
+
+  .breadcumb-menu-wrap {
+    margin: 65px 0 0 0;
+  }
+
+  .breadcumb-text {
+    font-size: 16px;
+  }
+}
+
+@include md {
+  .breadcumb-title {
+    font-size: 40px;
+    margin: -0.15em 0 -0.4em 0;
+  }
+
+  .breadcumb-text {
+    font-size: 16px;
+    margin: 22px 0 -0.25em 0;
+  }
+
+  .breadcumb-menu-wrap {
+    margin: 75px 0 0 0;
+  }
+}
+
+@include sm {
+  .breadcumb-title {
+    font-size: 36px;
+  }
+
+  .breadcumb-wrapper {
+    padding-top: 60px;
+  }
+
+  .breadcumb-menu-wrap {
+    margin: 45px 0 0 0;
+  }
+
+  .breadcumb-menu {
+
+    li,
+    a,
+    span {
+      font-size: 14px;
+    }
+
+    li:after {
+      margin-left: 11px;
+      margin-right: 9px;
+    }
+  }
+}
